@@ -9,9 +9,12 @@ def IOfSets(arr1, arr2, arr3):
     s2 = set(arr2)
     s3 = set(arr3)
     set1 = s1.intersection(s2)   
-    result_set = set1.intersection(s3)
-    final = list(result_set)
+    rset = set1.intersection(s3)
+    final = list(rset)
     return(final[0])
+
+def finder(list1, list2, list3):
+  return list(set(list1).intersection(list2, list3))
 data = data.split('\n')
 def p2():
     n = []
@@ -62,5 +65,4 @@ def p1():
         else:
             print("BAADDD")
     print(sum)
-p1()
-p2()
+print(finder([0,2,3],[0,5,6,3],[9,3,0,4,5]))
